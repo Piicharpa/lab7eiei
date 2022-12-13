@@ -1,32 +1,16 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
-
-
-int main(){
-	int i = 0, P[5000], k, result;
-
-    cout << "Please input k: ";
-    cin >> k;
-    if(k > 0){
-        i = 0, result = 0;
-	while(i < 5000){
-		P[i] = 2*i+1;
-		if(P[i] % k == 0){
-		    result -= P[i];
-		}
-		else{
-		    result += P[i];
-		}
-		i++;
-	}
-	
-	cout << "Result = " << result;
-    }
-    else{
-        cout << "Invalid input!!!";
-    }
-	
-	
-	return 0;
+int adiff(int A, int B){
+    int d = abs(A-B)%360;
+        if(d>180){
+            d = 360-d;
+        }
+    return d ;
 }
+
+
+
+
+
